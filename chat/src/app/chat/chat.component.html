@@ -5,7 +5,13 @@
             <input type="text" [(ngModel)]="messagecontent" name="messagecontent" id="messagecontent" class="form-control" />
         </div>
         <div class="form-group">
-            <button (click)="chat(messagecontent)" class="btn btn-primary"></button>
+            <button (click)="chat(messagecontent)" class="btn btn-primary">Chat</button>
+        </div>
+        <hr>
+        <div class="container">
+            <ul>
+                <li *ngFor="let msg of message">{{msg}}</li>
+            </ul>
         </div>
     </form>
 </div>
